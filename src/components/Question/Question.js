@@ -29,16 +29,20 @@ const Question = ({ currQues, setCurrQues, questions, options, correct, setScore
     const handleQuit = () => {
         setCurrQues(0);
         setQuestions();
+        setScore(0);
         history.push('/');
     };
 
     const handleNext = () => {
         // 9 + la question 0 => 10
-        if (currQues >= 9) history.push('/result');
-        else if (selected) {
+        if (currQues >= 9) {
+            history.push('/result');
+        } else if (selected) {
             setCurrQues(currQues + 1);
             setSelected();
-        } else setError('Please select an option first');
+        } else {
+            setError('Please select an option first');
+        }
     };
 
     return (

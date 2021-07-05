@@ -14,6 +14,7 @@ function App() {
     const [score, setScore] = useState(0);
 
     const fetchQuestions = async (category = '', difficulty = '') => {
+        setScore(0);
         const cat = category ? `&category=${category}` : ``;
         const diff = difficulty ? `&difficulty=${difficulty}` : ``;
         const { data } = await axios.get(`https://opentdb.com/api.php?amount=10${cat}${diff}&type=multiple`);
@@ -37,7 +38,9 @@ function App() {
                             setQuestions={setQuestions}
                         />
                     </Route>
-                    <Route path="/result" exact><Result name={name} score={score} /></Route>
+                    <Route path="/result" exact>
+                        <Result name={name} score={score} />
+                    </Route>
                     <Redirect to="/" />
                 </Switch>
             </div>
