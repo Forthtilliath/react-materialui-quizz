@@ -1,32 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@200&display=swap");
 
 *,
 :before,
 :after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scrollbar-width: thin;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
 }
 
 *::-webkit-scrollbar {
-    width: 8px;
-    background-color: grey;
-    color:red
+  width: 8px;
+  background-color: grey;
+  color: red;
 }
 
 *::-webkit-scrollbar-thumb {
-    background: #000;
+  background: #000;
 }
 
 a {
-    text-decoration: inherit;
-    color: inherit;
-}
-
-.app {
-    min-height: 98.5vh;
-    border: 8px solid #39445a93;
-    margin: 5px;
-    padding: 5px;
+  text-decoration: inherit;
+  color: inherit;
 }
